@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomSearchBar_Final_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJz-9j-Ji7">
+                                <rect key="frame" x="0.0" y="84" width="600" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQK-CN-PcC">
+                                        <rect key="frame" x="472" y="10" width="120" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="MG1-Hc-fZu"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="didPressCancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pcf-FB-Y8x"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2q-uq-CSb" customClass="CustomSearchField" customModule="CustomSearchBar_Final_" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="10" width="584" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="j53-6X-BDA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="p28-bn-l4A"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pe-Dt-RJl">
+                                        <rect key="frame" x="472" y="10" width="120" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="G3F-mT-WYh"/>
+                                        </constraints>
+                                        <state key="normal" title="FILTER"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ed1-eM-YqI">
+                                        <rect key="frame" x="420" y="10" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="omK-58-bDT"/>
+                                            <constraint firstAttribute="height" constant="44" id="q53-y1-a8s"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="didPressNavButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ovv-nd-qpm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFO-vN-TNJ">
+                                        <rect key="frame" x="548" y="10" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="GjU-cC-5hz"/>
+                                            <constraint firstAttribute="width" constant="44" id="KrH-q8-l9B"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="didPressXButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xkJ-Co-QkX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.91372549020000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5pe-Dt-RJl" firstAttribute="trailing" secondItem="J2q-uq-CSb" secondAttribute="trailing" id="118-rB-C3C"/>
+                                    <constraint firstItem="J2q-uq-CSb" firstAttribute="leading" secondItem="cJz-9j-Ji7" secondAttribute="leading" constant="8" id="6nd-yr-zgs"/>
+                                    <constraint firstItem="SQK-CN-PcC" firstAttribute="centerY" secondItem="cJz-9j-Ji7" secondAttribute="centerY" id="Bo0-sU-EIJ"/>
+                                    <constraint firstItem="5pe-Dt-RJl" firstAttribute="leading" secondItem="ed1-eM-YqI" secondAttribute="trailing" constant="8" id="NQ8-Nd-i2t"/>
+                                    <constraint firstAttribute="height" constant="64" id="Ojz-nn-BFU"/>
+                                    <constraint firstItem="lFO-vN-TNJ" firstAttribute="centerY" secondItem="cJz-9j-Ji7" secondAttribute="centerY" id="VgY-b8-59g"/>
+                                    <constraint firstAttribute="trailing" secondItem="J2q-uq-CSb" secondAttribute="trailing" constant="8" id="Wuq-EZ-3ee"/>
+                                    <constraint firstItem="5pe-Dt-RJl" firstAttribute="width" secondItem="SQK-CN-PcC" secondAttribute="width" id="fwn-xL-edN"/>
+                                    <constraint firstItem="lFO-vN-TNJ" firstAttribute="trailing" secondItem="J2q-uq-CSb" secondAttribute="trailing" id="hsQ-xd-ddP"/>
+                                    <constraint firstItem="5pe-Dt-RJl" firstAttribute="centerY" secondItem="cJz-9j-Ji7" secondAttribute="centerY" id="ja9-43-TKa"/>
+                                    <constraint firstAttribute="trailing" secondItem="SQK-CN-PcC" secondAttribute="trailing" constant="8" id="mA7-mA-Od6"/>
+                                    <constraint firstItem="SQK-CN-PcC" firstAttribute="width" secondItem="cJz-9j-Ji7" secondAttribute="width" multiplier="1:5" id="may-wX-77q"/>
+                                    <constraint firstItem="ed1-eM-YqI" firstAttribute="centerY" secondItem="cJz-9j-Ji7" secondAttribute="centerY" id="pYK-EQ-kKP"/>
+                                    <constraint firstItem="J2q-uq-CSb" firstAttribute="centerY" secondItem="cJz-9j-Ji7" secondAttribute="centerY" id="vsC-kg-IjI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cJz-9j-Ji7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="JJQ-qO-cZZ"/>
+                            <constraint firstItem="cJz-9j-Ji7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JJe-cL-Imt"/>
+                            <constraint firstItem="cJz-9j-Ji7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VmF-q7-sq3"/>
+                            <constraint firstAttribute="trailing" secondItem="cJz-9j-Ji7" secondAttribute="trailing" id="azJ-5R-5qa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="SQK-CN-PcC" id="ckK-m9-Cpy"/>
+                        <outlet property="filterButton" destination="5pe-Dt-RJl" id="a9w-2B-LQT"/>
+                        <outlet property="navButton" destination="ed1-eM-YqI" id="YNc-EX-P3u"/>
+                        <outlet property="searchContainerTopConstraint" destination="JJQ-qO-cZZ" id="E63-bs-nVo"/>
+                        <outlet property="searchContainerView" destination="cJz-9j-Ji7" id="Gvm-YC-zCf"/>
+                        <outlet property="searchField" destination="J2q-uq-CSb" id="eyA-YE-Iu0"/>
+                        <outlet property="searchFieldTrailingConstraint" destination="Wuq-EZ-3ee" id="V9E-ip-o3n"/>
+                        <outlet property="xButton" destination="lFO-vN-TNJ" id="yTq-FV-7Ed"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="306"/>
+        </scene>
+    </scenes>
+</document>
